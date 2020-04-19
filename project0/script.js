@@ -41,5 +41,10 @@ function onClick(id){
   }
 }
 function delNode(id){
+  childnodes = id.parentNode.childNodes
+  if (childnodes[1].checked) {
+    uncheckedCountSpan.innerHTML = parseInt(uncheckedCountSpan.innerHTML) -1
+  }
+  itemCountSpan.textContent = parseInt(itemCountSpan.textContent) -1
   list.removeChild(id.parentNode)
 }
